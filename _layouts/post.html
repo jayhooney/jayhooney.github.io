@@ -1,7 +1,19 @@
 ---
 layout: default
 ---
-
+<style>
+  .tag {
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 0.75rem;
+    color: #fff;
+    background-color: #3b3f47;
+    opacity: 0.6;
+    cursor: pointer;
+    line-height: 2;
+    transition: 0.5s;
+  }
+</style>
 <!-- Page Header -->
 {% if page.background %}
 <header class="masthead" style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')">
@@ -17,11 +29,19 @@ layout: default
             {% if page.subtitle %}
             <h2 class="subheading">{{ page.subtitle }}</h2>
             {% endif %}
-            <span class="meta">Posted by
+            <span style="margin-bottom: 31px;" class="meta">Posted by
               <a href="#">{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a>
               on {{ page.date | date: '%B %d, %Y' }} &middot; {% include read_time.html
               content=page.content %}
             </span>
+            <!--tags 출력 -->
+            {% if page.tags %}
+            {% for tag in page.tags %}
+            {% if site.data.tags contains tag%}
+            <span class="tag" data-tag="{{ tag }}">#{{ site.data.format[tag]}}</span>
+            {% endif%}
+            {% endfor %}
+            {% endif %}
           </div>
         </div>
       </div>
@@ -31,6 +51,7 @@ layout: default
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
+
 
         {{ content }}
 
