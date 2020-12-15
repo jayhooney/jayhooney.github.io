@@ -1,0 +1,21 @@
+---
+layout: page
+---
+
+<div class="catalogue">
+    <h1 style="margin-bottom: 25px;" class="category-title"><a href="/dev/{{ page.title }}"> {{ page.title }}</a></h1>
+    {% assign cate = page.category | default: page.title %}
+    {% for post in site.categories[ cate ] %}
+    <a href="{{ post.url | prepend: site.baseurl }} " class="catelogue-item">
+        <div >
+            <h2 class="catalogue-title"> {{post.subject | upcase }}{{ post.title}} 
+                <small style="text-align: right;"><time datetime="{{ post.date }}" class="catalogue-time"> - {{ post.date | date: "%B %d, %Y"}}</time></small></h1>
+            <p style="margin-top: 0px;" class="catalogue-content">{{ post.content | strip_html | truncatewords: 30 }}</p>
+            <br>
+        </div>
+
+
+    </a>
+    {% endfor %}
+
+</div>

@@ -1,0 +1,23 @@
+---
+layout: page
+title: Dev
+description: category
+---
+<div  class="category-wrap">
+    {% for list in site.category_list %}
+    <h1 class="category-title"><a href="/dev/{{ list }}">{{ list | upcase }}</a></h3>
+    <ul class="posts-list">
+        {% for post in site.categories[ list ] %}
+        <li>
+            <h4>
+                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}<small> {{ post.date | date_to_string }}</small></a>
+               
+            </h3>
+        </li>
+        {% endfor %}
+    </ul>
+    <div style="margin-bottom: 50px;"></div>
+    
+    {% endfor %}
+    
+</div>
