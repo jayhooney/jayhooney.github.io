@@ -5,7 +5,7 @@ author: Jay
 baseurl: ''
 url: 'https://jayhooney.github.io'
 
-category_list: [nodejs, javascript, typescript]
+dev_list: [retrospect, nodejs, javascript, typescript]
 
 # Social Profiles
 github_username: jayhooney
