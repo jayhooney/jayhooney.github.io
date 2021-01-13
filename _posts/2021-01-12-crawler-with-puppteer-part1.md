@@ -1,5 +1,5 @@
 ---
-title: 'Crawl the web with Puppteer Part.1'
+title: 'Crawl the web with Puppeteer Part.1'
 excerpt: 'Puppeteer 살펴보기'
 toc: true
 toc_sticky: true
