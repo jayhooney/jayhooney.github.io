@@ -1,5 +1,6 @@
 ---
-title: 'AWS Cloud'
+title: 'AWS Cloud Part.1'
+excerpt: 'AWS VPC 기초개념'
 toc: true
 toc_sticky: true
 header:
