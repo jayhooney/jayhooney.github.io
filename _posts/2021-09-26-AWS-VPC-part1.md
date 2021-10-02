@@ -12,7 +12,7 @@ tags:
   - VPC
   - Subnet
   - CIDR 
-last_modified_at: 2022-09-27
+last_modified_at: 2021-09-27
 ---
 
 ## 으아, 큰일났어요(?)
@@ -99,3 +99,12 @@ Network ACL와 Security Group은 각각 stateless, stateful 차이가 있다. �
 stateful 방화벽은 연결이 발생할 경우 그 연결을 기억하고 있다. 따라서, 들어온 요청(inbound)에 대해 응답(outbound)을 별도로 제한하지 않는다.
 반면 stateless 방화벽은 반대다.
 연결을 기억하지 않으며 들어온 요청에 대해 응답하려면 별도 설정을 해줘야 한다.
+
+## NAT gateway (Netwrok Address Translation)
+Public subnet에는 서비스 제공을 위해 0.0.0.0/0 대역으로 방화벽 오픈이 됐을테고, Private subnet은 서버,DB등을 배포 및 설치하여 사용할 것이므로 Public subnet의 요청만 수락하도록 설정됐을 것이다.
+하지만 서버나 DB는 종종 코드 배포나 마이그레이션 작업이 필요한데, Private Subnet은 Public Subnet과의 통신만을 허용해 놨으므로 불가능하다.
+이런 경우에 사용하는 것이 NAT gateway이다.
+
+Private subnet에 NAT gateway를 적용하면 Private subnet에서 외부로 패킷을 보내는 시도가 발생할 때 AWS에서 NAT gateway로 보낸다.
+NAT gateway는 해당 패킷을 인터넷으로 보내고, 커넥션을 기억하고 있다가 응답이 오면 Private Subnet으로 전달해준다.
+즉, NAT gateway는 Private subnet의 outbound만을 위한 특수 설정이다. 
