@@ -12,7 +12,8 @@ tags:
   - VPC
   - Subnet
   - CIDR 
-last_modified_at: 2021-09-27
+  - NAT gateway
+last_modified_at: 2021-10-01
 ---
 
 ## 으아, 큰일났어요(?)
