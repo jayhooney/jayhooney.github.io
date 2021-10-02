@@ -4,7 +4,7 @@ excerpt: 'Puppeteer 살펴보기'
 toc: true
 toc_sticky: true
 header:
-  teaser: /assets/images/bio-photo-keyboard-teaser.jpg
+  teaser: /assets/image/puppeteer.png
 
 categories:
   - Puppeteer

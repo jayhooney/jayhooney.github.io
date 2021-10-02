@@ -4,7 +4,7 @@ excerpt: 'Typescript와 tsconfig.json에 대해 간단히 알아보기'
 toc: true
 toc_sticky: true
 header:
-  teaser: /assets/images/bio-photo-keyboard-teaser.jpg
+  teaser: /assets/image/typescript.png
 
 categories:
   - Typescript
