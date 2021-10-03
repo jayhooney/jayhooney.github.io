@@ -4,7 +4,7 @@ excerpt: 'Puppeteer 살펴보기'
 toc: true
 toc_sticky: true
 header:
-  teaser: /assets/image/puppeteer.png
+  teaser: /assets/image/web_crawling_with_puppeteer.png
 
 categories:
   - Puppeteer

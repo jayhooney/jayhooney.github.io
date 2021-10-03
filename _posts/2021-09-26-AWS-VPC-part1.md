@@ -4,7 +4,7 @@ excerpt: 'AWS VPC 기초개념'
 toc: true
 toc_sticky: true
 header:
-  teaser: /assets/image/aws.png
+  teaser: /assets/image/aws_vpc.png
 categories:
   - AWS
 tags:
