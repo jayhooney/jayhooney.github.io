@@ -83,19 +83,19 @@ AWS는 기본적으로 서비스 사용자가 허용하지 않는 한 모든 것
 아무리 VPC를 만들고, Subnet으로 쪼개고, 인터넷을 개통해서 EC2의 서버를 80포트로 띄워도, 80포트를 개방하지 않으면 외부에서의 접근이 절대 불가능하다.
 AWS에서 제공해 주는 방화벽 서비스는 아래 두 가지가 있다. 
 
-#### 1.Network ACLs(Access Control List) : stateless firewalls
+### 1.Network ACLs(Access Control List) : stateless firewalls
 __외부 요청에__ 대한 보안정책을 정하는 것.
 Subnet 단위로 적용 가능하며, 하나의 Subent은 하나의 Network ACL을 지정할 수 있다.
 만약 하나의 Subnet에 1,000개 인스턴스가 존재한다면 모두 같은 보안 정책을 따르게 된다.
 
-#### 2.Security Group: stateful firewalls
+### 2.Security Group: stateful firewalls
 __내부 요청에__ 대한 보안정책을 정하는 것.
 Web Server는 모든 외부 접근에 대해서 개방돼야 하고, API Server는 Web Server의 요청만 허용하고 싶다.
 이럴 때 사용하는 것이 Security Group이다.
 인스턴스 단위로 적용 가능하며 Source(허용할 트래픽)는 IP, PORT를 직접 입력해 지정할 수도 있지만 다른 Security Group 자체를 포함 시킬 수도 있다.
 Web Server들을 하나의 보안 그룹으로 묶어 놓으면 API Server Security Group에 Web Server마다 IP를 하나하나 입력할 필요가 없다는 의미이다.
 
-#### 3. state less ? ful?
+### 3. state less ? ful?
 Network ACL와 Security Group은 각각 stateless, stateful 차이가 있다. 그럼 두 개의 차이는 무엇일까?
 stateful 방화벽은 연결이 발생할 경우 그 연결을 기억하고 있다. 따라서, 들어온 요청(inbound)에 대해 응답(outbound)을 별도로 제한하지 않는다.
 반면 stateless 방화벽은 반대다.
