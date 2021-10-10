@@ -4,7 +4,7 @@ excerpt: 'gitignore.io로 쉽게 .gitignore 생성하기'
 toc: true
 toc_sticky: true
 header:
-    teaser: /assets/image/gitignore.png
+    teaser: /assets/image/gitignoreio.png
 categories:
     - Git
 tags:
