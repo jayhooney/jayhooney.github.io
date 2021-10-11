@@ -93,8 +93,8 @@ analytics:
 # Site Author
 author:
   name: 'Jay'
-  avatar: '/assets/image/profile.jpg' # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio: 'Growth,Fun oriented back-end 개발자'
+  avatar: '/assets/image/profile.png' # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio: 'Growth,Fun oriented 개발자'
   location: 'KOREA'
   email:
   links:
