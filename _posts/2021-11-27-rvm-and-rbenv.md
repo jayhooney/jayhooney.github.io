@@ -40,8 +40,7 @@ RVM은 gemset을 지원해 줘서 프로젝트별로 루비 버전을 분리해 
 
 
 ## 참고문서
-웨,, 빌드,,실패헤,,,,?
-- [어떤 루리 버전 관리자가 좋을까?](https://www.slideshare.net/hosangjeon10/ruby-version-managers)
+- [어떤 루비 버전 관리자가 좋을까?](https://www.slideshare.net/hosangjeon10/ruby-version-managers)
 - [RVM github](https://github.com/rvm/rvm)
 - [RBenv github](https://github.com/rbenv/rbenv)
 - [RBenv 작동원리](https://withrails.com/2015/11/25/rbenv-%EC%9E%91%EB%8F%99%EC%9B%90%EB%A6%AC/)
